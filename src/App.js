@@ -1,6 +1,6 @@
 import React from 'react';
-import Search from './component/search';
-import Result from './component/result';
+import Search from './component/header/search';
+import Result from './component/body/result';
 import {SearchProvider} from './store/SearchContext';
 
 function App() {

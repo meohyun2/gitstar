@@ -1,8 +1,10 @@
 import React,{useContext,useState} from 'react';
-import {SearchContext,SearchProvider} from '../store/SearchContext';
+import {SearchContext,SearchProvider} from '../../store/SearchContext';
+
+const parser = require('../../parser/parser');
 
 function Search() {
-
+  
   const [inputString,setInputString] = useState('');
   const [searchText,setSearchText] = useContext(SearchContext);
 
@@ -14,7 +16,7 @@ function Search() {
   const changeContext = e =>{
     e.preventDefault();
     console.log(inputString);
-    setSearchText(inputString);
+    parser(inputString).then((retData)=>setSearchText(retData));
   }
   return (
     <div>

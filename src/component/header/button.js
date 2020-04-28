@@ -1,5 +1,6 @@
 import React,{useContext} from 'react';
-import {SearchContext,SearchProvider} from '../store/SearchContext';
+import {SearchContext,SearchProvider} from '../../store/SearchContext';
+
 
 
 function Button(props) {
@@ -8,8 +9,7 @@ function Button(props) {
 
   const changeContext = e =>{
     e.preventDefault();
-    console.log(props.text);
-    setSearchText(props.text);
+    
   }
   return (
     <div>
